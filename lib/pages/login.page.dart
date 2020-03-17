@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:shopping/pages/signup.page.dart';
 
+import 'home.page.dart';
+
 class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -119,9 +121,16 @@ class LoginPage extends StatelessWidget {
                             "Sign in",
                             style: TextStyle(color: Colors.white),
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => HomePage(),
+                              ),
+                            );
+                          },
                         ),
-                      )
+                      ),
                     ],
                   ),
                 ),
